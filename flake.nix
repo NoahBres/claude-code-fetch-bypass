@@ -24,7 +24,7 @@
 
           postInstall = (oldAttrs.postInstall or "") + ''
             # Bypass domain verification by forcing skipWebFetchPreflight to always return true
-            sed -i 's/if(!M0()\.skipWebFetchPreflight)/if(false)/g' $out/lib/node_modules/@anthropic-ai/claude-code/cli.js
+            sed -i 's/if(!.\{1,30\}\.skipWebFetchPreflight)/if(false)/g' $out/lib/node_modules/@anthropic-ai/claude-code/cli.js
           '';
         });
       };
