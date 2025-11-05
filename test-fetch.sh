@@ -1,0 +1,1 @@
+/Users/noah/.cargo/bin/httpjail  --js "r.host !== 'claude.ai'" -- nix run .#claude-code 2>/dev/null -- -p --dangerously-skip-permissions "can you fetch from google.com? give me a concise yes or no answer in the exact format 'yes' or 'no'"
